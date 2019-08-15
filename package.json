@@ -7,7 +7,7 @@
   "author": "Gabo Esquivel <contact@gaboesquivel.com>",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint . --ext .ts,.js"
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx"
   },
   "dependencies": {
     "@dfuse/client": "^0.2.10",
