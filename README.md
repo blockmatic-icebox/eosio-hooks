@@ -1,4 +1,3 @@
-# react-eos-hooks
-React EOS Hooks
+# React EOS Hooks
 
-_coming soon_
+_WORK IN PROGRESS_
