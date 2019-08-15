@@ -1,0 +1,30 @@
+{
+  "name": "eos-hooks",
+  "version": "0.1.0",
+  "description": "React Hooks for EOSIO dApps",
+  "main": "src/index",
+  "repository": "git@github.com:blockmatic/eos-hooks.git",
+  "author": "Gabo Esquivel <contact@gaboesquivel.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint . --ext .ts,.js"
+  },
+  "dependencies": {
+    "@dfuse/client": "^0.2.10",
+    "apollo-cache-inmemory": "^1.6.3",
+    "apollo-client": "^2.6.4",
+    "apollo-link-ws": "^1.0.18",
+    "eos-transit": "^4.0.1",
+    "eos-transit-lynx-provider": "^4.0.1",
+    "eos-transit-meetone-provider": "^4.0.1",
+    "eos-transit-scatter-provider": "^4.0.1",
+    "graphql": "^14.4.2",
+    "lodash.isequal": "^4.5.0",
+    "react": "^16.9.0",
+    "react-apollo-hooks": "^0.5.0",
+    "subscriptions-transport-ws": "^0.9.16"
+  },
+  "devDependencies": {
+    "@kevinwolf/eslint-config": "^0.2.3"
+  }
+}

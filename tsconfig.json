@@ -1,0 +1,17 @@
+{
+  "rootDirs": [
+    "src/"
+  ],
+  "baseUrl": "./src",
+  "compilerOptions": {
+    "declaration": true,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "lib": ["es2017", "es7", "es6", "dom"],
+    "module": "esnext",
+    "strict": true,
+    "target": "es5"
+  },
+  "exclude": ["node_modules", "**/lib", "**/__tests__"],
+  "include": ["src/"]
+}
