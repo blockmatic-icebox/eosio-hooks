@@ -90,6 +90,7 @@ type TransitProviderProps = {
   appname: string
 }
 
+// Transit Provider
 export function TransitProvider({ children, appname }: TransitProviderProps) {
   const [state, dispatch] = useReducer(transitReducer, {
     connecting: false,
@@ -154,4 +155,11 @@ export function useTransitDispatch() {
     connectWallet,
     disconnectWallet,
   }
+}
+
+
+export default {
+  useTransitDispatch,
+  useTransitState,
+  TransitProvider
 }

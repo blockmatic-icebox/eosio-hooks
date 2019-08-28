@@ -10,4 +10,9 @@ export declare function useTransitDispatch(): {
     connectWallet: (provider: TransitWalletProvider) => Promise<void>;
     disconnectWallet: () => void;
 };
-export {};
+declare const _default: {
+    useTransitDispatch: typeof useTransitDispatch;
+    useTransitState: typeof useTransitState;
+    TransitProvider: typeof TransitProvider;
+};
+export default _default;

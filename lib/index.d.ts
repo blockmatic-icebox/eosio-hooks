@@ -1,13 +1,6 @@
-import React from 'react';
-import { TransitWalletState, TransitWalletProvider } from './types';
-declare type TransitProviderProps = {
-    children: React.ReactNode;
-    appname: string;
+declare const _default: {
+    useTransitDispatch: typeof import("./transit/index").useTransitDispatch;
+    useTransitState: typeof import("./transit/index").useTransitState;
+    TransitProvider: typeof import("./transit/index").TransitProvider;
 };
-export declare function TransitProvider({ children, appname }: TransitProviderProps): JSX.Element;
-export declare function useTransitState(): TransitWalletState;
-export declare function useTransitDispatch(): {
-    connectWallet: (provider: TransitWalletProvider) => Promise<void>;
-    disconnectWallet: () => void;
-};
-export {};
+export default _default;
