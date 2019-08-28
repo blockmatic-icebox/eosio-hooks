@@ -10,6 +10,6 @@
     "outDir": "./lib",
     "types": ["react"]
   },
-  "exclude": ["node_modules","**/lib", "**/__tests__"],
+  "exclude": ["node_modules","**/lib", "**/__tests__", "exclude"],
   "include": ["./src"]
 }

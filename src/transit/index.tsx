@@ -55,8 +55,13 @@ const transitReducer = (state: any, action: ActionType) => {
 
 const walletProvider = localStorage.getItem('walletProvider')
 
-// this is replaced
-let getWallet = () => {}
+let accessContext : any
+
+const getWallet = (walletProvider: TransitWalletProvider): Promise<Wallet> => {
+  const TransitWalletProvider = accessContext.getTransitWalletProvider()
+  // @ts-ignore
+  return accessContext.initWallet(TransitWalletProvider[providers.findIndex(p => p === walletProvider)])
+}
 
 const _connectWallet = async (provider: TransitWalletProvider, dispatch:Function) =>{
   dispatch({ type: 'CONNECT_WALLET_START', payload: { provider } })
@@ -92,7 +97,7 @@ export function TransitProvider({ children, appname }: TransitProviderProps) {
     error: null,
   })
 
-  const accessContext = useMemo( () => initAccessContext({
+  accessContext = useMemo( () => initAccessContext({
     appName: appname,
     network: {
       host: 'kylin.eoscanada.com',
@@ -100,14 +105,8 @@ export function TransitProvider({ children, appname }: TransitProviderProps) {
       protocol: 'https',
       chainId: 'e70aaab8997e1dfce58fbfac80cbbb8fecec7b99cf982a9444273cbc64c41473',
     },
-    TransitWalletProvider: [scatter(), tokenPocket(), lynx(), meetone()],
+    walletProviders: [scatter(), tokenPocket(), lynx(), meetone()],
   }), [appname] )
-
-  getWallet = (walletProvider: TransitWalletProvider): Promise<Wallet> => {
-    const TransitWalletProvider = accessContext.getTransitWalletProvider()
-    // @ts-ignore
-    return accessContext.initWallet(TransitWalletProvider[providers.findIndex(p => p === walletProvider)])
-  }
 
   // reconnect
   useEffect(()=>{
