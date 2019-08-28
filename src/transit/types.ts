@@ -1,13 +1,14 @@
 import { Wallet } from 'eos-transit'
 
-export interface WalletStateType {
+export interface TransitWalletState {
   wallet: null | Wallet
   connecting: null | string
   error: boolean
 }
 
-export interface WalletDispatchType {
-  connect: (walletProvider: WalletProviders) => void
+export interface TransitWalletDispatch {
+  connect: (walletProvider: TransitWalletProvider) => void
 }
 
-export type WalletProviders = 'scatter' | 'tokenpocket' | 'eoslynx' | 'meetone'
+export type TransitWalletProvider = 'scatter' | 'tokenpocket' | 'eoslynx' | 'meetone'
+

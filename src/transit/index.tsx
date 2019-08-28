@@ -6,9 +6,9 @@ import tokenPocket from 'eos-transit-scatter-provider'
 import meetone from 'eos-transit-meetone-provider'
 import lynx from 'eos-transit-lynx-provider'
 
-import { WalletStateType, WalletProviders } from './types'
+import { TransitWalletState, TransitWalletProvider } from './types'
 
-const TransitStateContext = createContext<undefined | WalletStateType>(undefined)
+const TransitStateContext = createContext<undefined | TransitWalletState>(undefined)
 const TransitDispatchContext = createContext<undefined | Dispatch<ActionType>>(undefined)
 
 interface ActionType {
@@ -63,20 +63,20 @@ const accessContext = initAccessContext({
     protocol: config.eosApiProtocol || 'http',
     chainId: config.eosChainId || 'e70aaab8997e1dfce58fbfac80cbbb8fecec7b99cf982a9444273cbc64c41473',
   },
-  walletProviders: [scatter(), tokenPocket(), lynx(), meetone()],
+  TransitWalletProvider: [scatter(), tokenPocket(), lynx(), meetone()],
 })
 
-const getWallet = (walletProvider: WalletProviders): Promise<Wallet> => {
+const getWallet = (walletProvider: TransitWalletProvider): Promise<Wallet> => {
 
-  const walletProviders = accessContext.getWalletProviders()
+  const TransitWalletProvider = accessContext.getTransitWalletProvider()
 
   // @ts-ignore
-  return accessContext.initWallet(walletProviders[providers.findIndex(p => p === walletProvider)])
+  return accessContext.initWallet(TransitWalletProvider[providers.findIndex(p => p === walletProvider)])
 }
 
 const walletProvider = localStorage.getItem('walletProvider')
 
-export function TransitProvider({ children }: { children: JSX.Element }) {
+export function TransitProvider({ children }: { children: React.ReactNode }) {
   const [state, dispatch] = useReducer(transitReducer, {
     connecting: false,
     wallet: null,
@@ -86,7 +86,7 @@ export function TransitProvider({ children }: { children: JSX.Element }) {
   // reconnect
   useEffect(()=>{
     if(!walletProvider) return
-    _connectWallet(walletProvider as WalletProviders, dispatch)
+    _connectWallet(walletProvider as TransitWalletProvider, dispatch)
   },[])
 
   return (
@@ -106,7 +106,7 @@ export function useTransitState() {
   return state
 }
 
-const _connectWallet = async (provider: WalletProviders, dispatch:Function) =>{
+const _connectWallet = async (provider: TransitWalletProvider, dispatch:Function) =>{
   dispatch({ type: 'CONNECT_WALLET_START', payload: { provider } })
 
   try {
@@ -136,7 +136,7 @@ export function useTransitDispatch() {
   }
 
   const connectWallet = useCallback(
-    async (provider: WalletProviders) => _connectWallet(provider, dispatch),
+    async (provider: TransitWalletProvider) => _connectWallet(provider, dispatch),
     [dispatch]
   )
 
