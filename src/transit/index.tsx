@@ -1,4 +1,4 @@
-import React, { Dispatch, createContext, useCallback, useReducer, useContext, useEffect } from 'react'
+import React, {useMemo, Dispatch, createContext, useCallback, useReducer, useContext, useEffect } from 'react'
 
 import { initAccessContext, Wallet } from 'eos-transit'
 import scatter from 'eos-transit-scatter-provider'
@@ -53,58 +53,10 @@ const transitReducer = (state: any, action: ActionType) => {
   }
 }
 
-const providers = ['scatter', 'tokenpocket', 'lynx', 'meetone']
-
-const accessContext = initAccessContext({
-  appName: 'appname',
-  network: {
-    host: config.eosApiHost || 'jungle2.cryptolions.io',
-    port: parseInt(config.eosApiPort || '80', 10),
-    protocol: config.eosApiProtocol || 'http',
-    chainId: config.eosChainId || 'e70aaab8997e1dfce58fbfac80cbbb8fecec7b99cf982a9444273cbc64c41473',
-  },
-  TransitWalletProvider: [scatter(), tokenPocket(), lynx(), meetone()],
-})
-
-const getWallet = (walletProvider: TransitWalletProvider): Promise<Wallet> => {
-
-  const TransitWalletProvider = accessContext.getTransitWalletProvider()
-
-  // @ts-ignore
-  return accessContext.initWallet(TransitWalletProvider[providers.findIndex(p => p === walletProvider)])
-}
-
 const walletProvider = localStorage.getItem('walletProvider')
 
-export function TransitProvider({ children }: { children: React.ReactNode }) {
-  const [state, dispatch] = useReducer(transitReducer, {
-    connecting: false,
-    wallet: null,
-    error: null,
-  })
-
-  // reconnect
-  useEffect(()=>{
-    if(!walletProvider) return
-    _connectWallet(walletProvider as TransitWalletProvider, dispatch)
-  },[])
-
-  return (
-    <TransitStateContext.Provider value={state}>
-      <TransitDispatchContext.Provider value={dispatch}>{children}</TransitDispatchContext.Provider>
-    </TransitStateContext.Provider>
-  )
-}
-
-export function useTransitState() {
-  const state = useContext(TransitStateContext)
-
-  if (state === undefined) {
-    throw new Error('You must wrap your application with <TransitProvider /> in order to useTransitState().')
-  }
-
-  return state
-}
+// this is replaced
+let getWallet = () => {}
 
 const _connectWallet = async (provider: TransitWalletProvider, dispatch:Function) =>{
   dispatch({ type: 'CONNECT_WALLET_START', payload: { provider } })
@@ -128,6 +80,60 @@ const _connectWallet = async (provider: TransitWalletProvider, dispatch:Function
   }
 }
 
+type TransitProviderProps = {
+  children: React.ReactNode
+  appname: string
+}
+
+export function TransitProvider({ children, appname }: TransitProviderProps) {
+  const [state, dispatch] = useReducer(transitReducer, {
+    connecting: false,
+    wallet: null,
+    error: null,
+  })
+
+  const accessContext = useMemo( () => initAccessContext({
+    appName: appname,
+    network: {
+      host: 'kylin.eoscanada.com',
+      port: 443,
+      protocol: 'https',
+      chainId: 'e70aaab8997e1dfce58fbfac80cbbb8fecec7b99cf982a9444273cbc64c41473',
+    },
+    TransitWalletProvider: [scatter(), tokenPocket(), lynx(), meetone()],
+  }), [appname] )
+
+  getWallet = (walletProvider: TransitWalletProvider): Promise<Wallet> => {
+    const TransitWalletProvider = accessContext.getTransitWalletProvider()
+    // @ts-ignore
+    return accessContext.initWallet(TransitWalletProvider[providers.findIndex(p => p === walletProvider)])
+  }
+
+  // reconnect
+  useEffect(()=>{
+    if(!walletProvider) return
+    _connectWallet(walletProvider as TransitWalletProvider, dispatch)
+  },[])
+
+  return (
+    <TransitStateContext.Provider value={state}>
+      <TransitDispatchContext.Provider value={dispatch}>{children}</TransitDispatchContext.Provider>
+    </TransitStateContext.Provider>
+  )
+}
+
+// Transit State
+export function useTransitState() {
+  const state = useContext(TransitStateContext)
+
+  if (state === undefined) {
+    throw new Error('You must wrap your application with <TransitProvider /> in order to useTransitState().')
+  }
+
+  return state
+}
+
+// Transit Dispatch
 export function useTransitDispatch() {
   const dispatch = useContext(TransitDispatchContext)
 

@@ -26,6 +26,8 @@
     "subscriptions-transport-ws": "^0.9.16"
   },
   "devDependencies": {
-    "@kevinwolf/eslint-config": "^0.2.3"
+    "@kevinwolf/eslint-config": "^0.2.3",
+    "@types/lodash.isequal": "^4.5.5",
+    "@types/react": "^16.9.2"
   }
 }

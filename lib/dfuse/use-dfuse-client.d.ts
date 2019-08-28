@@ -1,1 +1,1 @@
-export default function useDfuseConfig(): any;
+export default function useDfuseConfig(): import("@dfuse/client").DfuseClient;
