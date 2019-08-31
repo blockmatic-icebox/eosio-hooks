@@ -10,7 +10,7 @@
     "module": "commonjs",
     "strict": true,
     "target": "es5",
-    "outDir": "./lib",
+    "outDir": "./build",
     "types": ["react"]
   },
   "exclude": ["node_modules","**/lib", "**/__tests__", "exclude"],

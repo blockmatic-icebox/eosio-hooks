@@ -8,7 +8,8 @@
   "author": "Gabo Esquivel <contact@gaboesquivel.com>",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint . --ext .ts,.tsx,.js,.jsx"
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "build": "tsc"
   },
   "dependencies": {
     "@dfuse/client": "^0.2.10",
@@ -19,7 +20,7 @@
     "eos-transit-lynx-provider": "^4.0.1",
     "eos-transit-meetone-provider": "^4.0.1",
     "eos-transit-scatter-provider": "^4.0.1",
-    "graphql": "^14.5.3",
+    "graphql": "^14.5.4",
     "lodash.isequal": "^4.5.0",
     "react": "^16.9.0",
     "react-apollo-hooks": "^0.5.0",
