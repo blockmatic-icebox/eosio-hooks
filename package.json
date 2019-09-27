@@ -2,14 +2,24 @@
   "name": "eos-hooks",
   "version": "0.1.0",
   "description": "React Hooks for EOSIO dApps",
-  "main": "lib/eoshooks.js",
-  "types": "lib/eoshooks.d.ts",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "types": "types",
   "repository": "git@github.com:blockmatic/eos-hooks.git",
   "author": "Gabo Esquivel <contact@gaboesquivel.com>",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
-    "build": "tsc"
+    "test": "dev-scripts test",
+    "lint": "dev-scripts lint",
+    "build": "dev-scripts build",
+    "commit": "dev-scripts commit",
+    "release": "dev-scripts release"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "dev-scripts commitmsg",
+      "pre-commit": "dev-scripts precommit"
+    }
   },
   "dependencies": {
     "@dfuse/client": "^0.2.10",
@@ -24,11 +34,15 @@
     "lodash.isequal": "^4.5.0",
     "react": "^16.9.0",
     "react-apollo-hooks": "^0.5.0",
+    "react-use": "^12.2.2",
     "subscriptions-transport-ws": "^0.9.16"
   },
   "devDependencies": {
-    "@kevinwolf/eslint-config": "^0.2.3",
+    "@blockmatic/dev-scripts": "^1.1.5",
+    "@blockmatic/tsconfig": "^1.1.5",
     "@types/lodash.isequal": "^4.5.5",
-    "@types/react": "^16.9.2"
+    "@types/react": "^16.9.2",
+    "@types/ws": "^6.0.3",
+    "husky": "^3.0.5"
   }
 }

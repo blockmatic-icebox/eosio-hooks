@@ -1,14 +1,30 @@
-import { Wallet } from 'eos-transit'
+import { Wallet, NetworkConfig } from 'eos-transit'
 
-export interface TransitWalletState {
+export interface TransitProviderProps {
+  children: React.ReactNode
+  config: TransitConfig
+}
+export type TransitConfig = {
+  appName: string
+  network: NetworkConfig
+  providers: Array<TransitWalletProvider>
+}
+
+export type TransitWalletProvider = 'scatter' | 'tokenpocket' | 'eoslynx' | 'meetone'
+
+export type TransitContextType = {
+  connectWallet: (provider: TransitWalletProvider) => Promise<void>
+  disconnectWallet: () => void
+}
+
+export interface TransitState {
   wallet: null | Wallet
   connecting: null | string
   error: boolean
 }
 
-export interface TransitWalletDispatch {
-  connect: (walletProvider: TransitWalletProvider) => void
+export interface TransitReducerActionType {
+  type: 'CONNECT_WALLET_START' | 'CONNECT_WALLET' | 'DISCONNECT_WALLET' | 'CONNECT_ERROR'
+  payload?: any
 }
-
-export type TransitWalletProvider = 'scatter' | 'tokenpocket' | 'eoslynx' | 'meetone'
 
