@@ -5,7 +5,6 @@
   "main": "cjs/index.js",
   "module": "esm/index.js",
   "types": "types/index.d.ts",
-  "typings": "types/index.d.ts",
   "repository": "git@github.com:blockmatic/eos-hooks.git",
   "author": "Gabo Esquivel <contact@gaboesquivel.com>",
   "license": "MIT",
