@@ -1,5 +1,5 @@
-import React from 'react'
-import { Wallet, NetworkConfig } from 'eos-transit'
+import React from 'react';
+import { Wallet, NetworkConfig } from 'eos-transit';
 
 export interface TransitProviderProps {
   children: React.ReactNode;

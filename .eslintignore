@@ -5,3 +5,4 @@ packages/**/lib
 storybook-static
 rn-renderer
 exclude
+example
