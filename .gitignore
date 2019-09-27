@@ -25,6 +25,7 @@ yarn-error.log*
 
 # dev notes
 __devnotes
+__dev
 
 # dev-scripts paths
 types
