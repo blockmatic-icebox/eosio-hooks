@@ -1,5 +1,5 @@
 {
   "extends": "./node_modules/@blockmatic/tsconfig/tsconfig.lib.json",
-  "exclude": ["cjs", "esm", "types", "exclude", "example"],
+  "exclude": ["cjs", "esm", "types", "example"],
   "include": ["src"]
 }

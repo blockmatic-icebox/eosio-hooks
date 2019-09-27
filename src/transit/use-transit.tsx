@@ -10,11 +10,6 @@ export default function useTransit() {
     throw new Error('You must wrap your application with <TransitProvider /> in order to useTransit().')
   }
 
-  console.log({
-    state,
-    ...context,
-  })
-
   return {
     state,
     ...context,

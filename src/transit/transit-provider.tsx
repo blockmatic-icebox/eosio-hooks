@@ -28,9 +28,6 @@ export default function TransitProvider({ children, config }: TransitProviderPro
   const accessContextConfig = useMemo(() => {
     const { appName, network } = config
     const walletProviders = getWalletProviders(config.providers as Array<TransitWalletProvider>)
-
-    console.log('walletProviders')
-    console.log(walletProviders)
     return {
       appName,
       network,
