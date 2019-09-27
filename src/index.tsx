@@ -1,3 +1,3 @@
-import {useTransit, useTransitState } from './transit'
+import {useTransit, useTransitState, TransitProvider } from './transit'
 
-export default {useTransit, useTransitState }
+export default { useTransit, useTransitState, TransitProvider }

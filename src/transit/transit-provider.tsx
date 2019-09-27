@@ -1,5 +1,5 @@
 import React, { useMemo, useCallback, useEffect} from 'react'
-import { useLocalStorage } from 'react-use'
+import useLocalStorage from 'react-use-localstorage'
 import { initAccessContext } from 'eos-transit'
 import scatter from 'eos-transit-scatter-provider'
 import tokenPocket from 'eos-transit-scatter-provider'
@@ -21,8 +21,8 @@ const getWalletProviders = (providerList:Array<TransitWalletProvider>) => {
   return providerList.map((provider:string) => supportedProviders[provider]())
 }
 
-export function TransitProvider({ children, config }: TransitProviderProps) {
-  const [transitProvider, setTransitProvider] = useLocalStorage<TransitWalletProvider>('wallet-provider', undefined)
+export default function TransitProvider({ children, config }: TransitProviderProps) {
+  const [transitProvider, setTransitProvider] = useLocalStorage('wallet-provider', undefined)
   const [state, dispatch] = useTransitReducer()
 
   const accessContextConfig = useMemo(()=>{
@@ -64,7 +64,7 @@ export function TransitProvider({ children, config }: TransitProviderProps) {
 
   // reconnection to previusly used provider
   useEffect(() => {
-    if (!transitProvider) {connectWallet(transitProvider)}
+    if (!transitProvider) {connectWallet(transitProvider as TransitWalletProvider)}
     return
   }, [transitProvider])
 

@@ -1,9 +1,8 @@
 {
-  "name": "eos-hooks",
+  "name": "@blockmatic/eosio-hooks",
   "version": "0.1.0",
   "description": "React Hooks for EOSIO dApps",
-  "main": "cjs/index.js",
-  "module": "esm/index.js",
+  "main": "build/index.js",
   "types": "types",
   "repository": "git@github.com:blockmatic/eos-hooks.git",
   "author": "Gabo Esquivel <contact@gaboesquivel.com>",
@@ -11,7 +10,8 @@
   "scripts": {
     "test": "dev-scripts test",
     "lint": "dev-scripts lint",
-    "build": "dev-scripts build",
+    "build": "tsc",
+    "build_FIXME": "dev-scripts build",
     "commit": "dev-scripts commit",
     "release": "dev-scripts release"
   },
@@ -35,6 +35,7 @@
     "react": "^16.9.0",
     "react-apollo-hooks": "^0.5.0",
     "react-use": "^12.2.2",
+    "react-use-localstorage": "^3.2.1",
     "subscriptions-transport-ws": "^0.9.16"
   },
   "devDependencies": {
@@ -43,6 +44,7 @@
     "@types/lodash.isequal": "^4.5.5",
     "@types/react": "^16.9.2",
     "@types/ws": "^6.0.3",
+    "eslint": "^6.1.0",
     "husky": "^3.0.5"
   }
 }

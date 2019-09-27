@@ -1,3 +1,4 @@
+import React from 'react'
 import { Wallet, NetworkConfig } from 'eos-transit'
 
 export interface TransitProviderProps {
