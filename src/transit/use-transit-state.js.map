@@ -1,1 +1,0 @@
-{"version":3,"file":"use-transit-state.js","sourceRoot":"","sources":["use-transit-state.tsx"],"names":[],"mappings":";;AAAA,iCAAkC;AAClC,uDAAuD;AAEvD,SAAwB,eAAe;IACrC,MAAM,OAAO,GAAG,kBAAU,CAAC,qCAAmB,CAAC,CAAA;IAE/C,IAAI,OAAO,KAAK,SAAS,EAAE;QACzB,MAAM,IAAI,KAAK,CAAC,wFAAwF,CAAC,CAAA;KAC1G;IAED,OAAO,OAAO,CAAA;AAChB,CAAC;AARD,kCAQC"}
