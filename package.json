@@ -13,6 +13,7 @@
     "@blockmatic/eslint-config": "^1.1.7",
     "cross-env": "^6.0.0",
     "eslint": "^6.4.0",
+    "husky": "^3.0.7",
     "lerna": "^3.16.4",
     "react": "^16.10.0",
     "react-dom": "^16.10.0"
