@@ -10,7 +10,8 @@
     "publish": {
       "allowBranch": "master",
       "conventionalCommits": true,
-      "ignoreChanges": ["!packages/**"]
+      "ignoreChanges": ["!packages/**"],
+      "message": "chore(release): release %s 🚀 [skip ci]"
     }
   }
 }
