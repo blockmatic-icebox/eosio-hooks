@@ -11,11 +11,15 @@ export type TransitConfig = {
   providers: Array<string>;
 };
 
-export type TransitWalletProvider = 'scatter' | 'tokenpocket' | 'eoslynx' | 'meetone';
+export type TransitWalletProvider = 'scatter' | 'tokenpocket' | 'lynx' | 'meetone';
 
 export type TransitContextType = {
   connectWallet: (provider: TransitWalletProvider) => Promise<void>;
   disconnectWallet: () => void;
+  connectScatter: () => Promise<void>;
+  connectLynx: () => Promise<void>;
+  connectTokenPocket: () => Promise<void>;
+  connectMeetOne: () => Promise<void>;
 };
 
 export interface TransitState {

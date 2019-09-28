@@ -65,6 +65,11 @@ export default function TransitProvider({ children, config }: TransitProviderPro
     localStorage.removeItem('walletProvider')
   }, [dispatch])
 
+  const connectScatter = useCallback(() => connectWallet('scatter'), [connectWallet])
+  const connectLynx = useCallback(() => connectWallet('lynx'), [connectWallet])
+  const connectMeetOne = useCallback(() => connectWallet('meetone'), [connectWallet])
+  const connectTokenPocket = useCallback(() => connectWallet('tokenpocket'), [connectWallet])
+
   // reconnection to previusly used provider
   useEffect(() => {
     if (!transitProvider) {
@@ -74,7 +79,16 @@ export default function TransitProvider({ children, config }: TransitProviderPro
   }, [transitProvider, connectWallet])
 
   return (
-    <TransitContext.Provider value={{ connectWallet, disconnectWallet }}>
+    <TransitContext.Provider
+      value={{
+        connectWallet,
+        disconnectWallet,
+        connectScatter,
+        connectLynx,
+        connectMeetOne,
+        connectTokenPocket,
+      }}
+    >
       <TransitStateContext.Provider value={state}>
         <TransitDispatchContext.Provider value={dispatch}>{children}</TransitDispatchContext.Provider>
       </TransitStateContext.Provider>

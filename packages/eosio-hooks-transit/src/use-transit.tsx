@@ -11,7 +11,7 @@ export default function useTransit() {
   }
 
   return {
-    state,
+    transitState: state,
     ...context,
   }
 }
