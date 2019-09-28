@@ -3,13 +3,13 @@ import { TransitProvider, useTransitState, useTransit } from '@blockmatic/eosio-
 
 function TransitData() {
   const state = useTransitState();
-  const { connectWallet, disconnectWallet } = useTransit();
+  const { connectScatter, disconnectWallet } = useTransit();
 
   return (
     <div>
       <pre>{JSON.stringify(state, null, 2)}</pre>
       <br />
-      <button onClick={() => connectWallet('scatter')}>Connect Scatter</button>
+      <button onClick={() => connectScatter()}>Connect Scatter</button>
       <button onClick={disconnectWallet}>Disconnect Scatter</button>
     </div>
   );
