@@ -1,4 +1,4 @@
-# React EOS Hooks
+# EOSIO Hooks
 
 _WORK IN PROGRESS_
 
