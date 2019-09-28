@@ -11,6 +11,7 @@
   "devDependencies": {
     "@blockmatic/dev-scripts": "^1.1.7",
     "@blockmatic/eslint-config": "^1.1.7",
+    "cross-env": "^6.0.0",
     "eslint": "^6.4.0",
     "lerna": "^3.16.4",
     "react": "^16.10.0",
@@ -22,7 +23,7 @@
     "lint": "lerna run lint --stream",
     "commit": "dev-scripts commit",
     "bootstrap": "lerna bootstrap --use-workspaces",
-    "release": "lerna publish",
+    "release": "cross-env .env lerna publish",
     "diff": "lerna diff",
     "new-version": "lerna version --conventional-commits --yes"
   },
