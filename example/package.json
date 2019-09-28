@@ -11,7 +11,7 @@
     "@types/node": "12.7.8",
     "@types/react": "16.9.3",
     "@types/react-dom": "16.9.1",
-    "@blockmatic/eosio-hooks": "file:../esm"
+    "@blockmatic/eosio-hooks": "0.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -36,9 +36,5 @@
   },
   "devDependencies": {
     "eslint": "^6.1.0"
-  },
-  "peerDependencies": {
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0"
   }
 }

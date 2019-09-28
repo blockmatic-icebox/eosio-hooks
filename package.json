@@ -1,57 +1,35 @@
 {
-  "name": "@blockmatic/eosio-hooks",
-  "version": "0.1.0",
-  "description": "React Hooks for EOSIO dApps",
-  "main": "cjs/index.js",
-  "module": "esm/index.js",
-  "types": "types/index.d.ts",
-  "repository": "git@github.com:blockmatic/eos-hooks.git",
+  "name": "@blockmatic/eosio-hooks-monorepo",
+  "private": true,
+  "repository": "git@github.com:blockmatic/eosio-hooks.git",
   "author": "Gabo Esquivel <contact@gaboesquivel.com>",
   "license": "MIT",
+  "workspaces": [
+    "example",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@blockmatic/dev-scripts": "^1.1.7",
+    "@blockmatic/eslint-config": "^1.1.7",
+    "eslint": "^6.4.0",
+    "lerna": "^3.16.4",
+    "react": "^16.10.0",
+    "react-dom": "^16.10.0"
+  },
   "scripts": {
-    "clean": "rm -rf cjs esm types",
-    "test": "dev-scripts test",
-    "lint": "dev-scripts lint",
-    "build": "dev-scripts build",
+    "test": "lerna run test --stream",
+    "build": "lerna run build --stream",
+    "lint": "lerna run lint --stream",
     "commit": "dev-scripts commit",
-    "release": "dev-scripts release"
+    "bootstrap": "lerna bootstrap --use-workspaces",
+    "release": "lerna publish",
+    "diff": "lerna diff",
+    "new-version": "lerna version --conventional-commits --yes"
   },
   "husky": {
     "hooks": {
       "commit-msg": "dev-scripts commitmsg",
       "pre-commit": "dev-scripts precommit"
     }
-  },
-  "dependencies": {
-    "@dfuse/client": "^0.2.10",
-    "apollo-cache-inmemory": "^1.6.3",
-    "apollo-client": "^2.6.4",
-    "apollo-link-ws": "^1.0.18",
-    "eos-transit": "^4.0.1",
-    "eos-transit-lynx-provider": "^4.0.1",
-    "eos-transit-meetone-provider": "^4.0.1",
-    "eos-transit-scatter-provider": "^4.0.1",
-    "graphql": "^14.5.4",
-    "lodash.isequal": "^4.5.0",
-    "react": "^16.9.0",
-    "react-apollo-hooks": "^0.5.0",
-    "react-dom": "^16.9.0",
-    "react-use": "^12.2.2",
-    "react-use-localstorage": "^3.2.1",
-    "subscriptions-transport-ws": "^0.9.16"
-  },
-  "devDependencies": {
-    "@blockmatic/dev-scripts": "^1.1.5",
-    "@blockmatic/eslint-config": "^1.0.1",
-    "@blockmatic/tsconfig": "^1.1.5",
-    "@types/lodash.isequal": "^4.5.5",
-    "@types/react": "^16.9.2",
-    "@types/ws": "^6.0.3",
-    "eslint": "^6.1.0",
-    "husky": "^3.0.5"
-  },
-  "peerDependencies": {
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0"
   }
 }

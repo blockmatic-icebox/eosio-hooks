@@ -1,0 +1,1 @@
+{"version":3,"file":"use-transit-dispatch.js","sourceRoot":"","sources":["../src/use-transit-dispatch.tsx"],"names":[],"mappings":";;AAAA,iCAAkC;AAClC,uDAA0D;AAE1D,SAAwB,kBAAkB;IACxC,MAAM,QAAQ,GAAG,kBAAU,CAAC,wCAAsB,CAAC,CAAA;IAEnD,IAAI,QAAQ,KAAK,SAAS,EAAE;QAC1B,MAAM,IAAI,KAAK,CAAC,2FAA2F,CAAC,CAAA;KAC7G;IAED,OAAO,QAAQ,CAAA;AACjB,CAAC;AARD,qCAQC"}

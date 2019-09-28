@@ -4,5 +4,5 @@ node_modules
 packages/**/lib
 storybook-static
 rn-renderer
-exclude
 example
+**/__tests__
