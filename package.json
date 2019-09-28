@@ -24,7 +24,7 @@
     "lint": "lerna run lint --stream",
     "commit": "dev-scripts commit",
     "bootstrap": "lerna bootstrap --use-workspaces",
-    "release": "env-cmd erna publish",
+    "release": "env-cmd lerna publish",
     "diff": "lerna diff"
   },
   "husky": {
