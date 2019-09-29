@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { TransitProvider, useTransitState, useTransit } from '@blockmatic/eosio-hooks';
 
 function TransitData() {
   const state = useTransitState();
   const { connectScatter, disconnectWallet } = useTransit();
+  const handleConnectScatter = useCallback(async () => {
+    try {
+      await connectScatter();
+    } catch (err) {
+      console.log(err);
+      alert('Cannot connect to Scatter');
+    }
+  }, [connectScatter]);
 
   return (
     <div>
       <pre>{JSON.stringify(state, null, 2)}</pre>
       <br />
-      <button onClick={() => connectScatter()}>Connect Scatter</button>
+      <button onClick={handleConnectScatter}>Connect Scatter</button>
       <button onClick={disconnectWallet}>Disconnect Scatter</button>
     </div>
   );

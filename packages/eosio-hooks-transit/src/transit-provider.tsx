@@ -55,6 +55,7 @@ export default function TransitProvider({ children, config }: TransitProviderPro
         setTransitProvider(provider)
       } catch (err) {
         dispatch({ type: 'CONNECT_ERROR' })
+        throw new Error(err)
       }
     },
     [dispatch, accessContext, config.providers, setTransitProvider],
