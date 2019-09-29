@@ -13,3 +13,7 @@ _THIS IS STILL A WORK IN PROCESS_
 ## Getting Started
 
 `yarn bootstrap && yarn build && cd example && yarn start`
+
+## Commons Issues
+
+Duplicated React versions in your project. Run `yarn why react` to detect them.
