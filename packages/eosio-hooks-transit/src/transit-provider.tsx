@@ -73,10 +73,8 @@ export default function TransitProvider({ children, config }: TransitProviderPro
 
   // reconnection to previusly used provider
   useEffect(() => {
-    if (!transitProvider) {
-      connectWallet(transitProvider as TransitWalletProvider)
-    }
-    return
+    if (!transitProvider) return
+    connectWallet(transitProvider as TransitWalletProvider)
   }, [transitProvider, connectWallet])
 
   return (
