@@ -11,7 +11,7 @@
       "allowBranch": "master",
       "conventionalCommits": true,
       "ignoreChanges": ["!packages/**"],
-      "message": "chore(release): release %s 🚀 [skip ci]"
+      "message": "chore(release): 🚀 [skip ci]"
     }
   }
 }
