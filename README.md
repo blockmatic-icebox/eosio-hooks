@@ -37,7 +37,7 @@ Duplicated React versions in your project. Run `yarn why react` to detect them.
 
 ## Contributing
 
-Read the [contributing guidelines](CONTRIBUTING.md) for details.
+Read the [contributing guidelines](https://developers.blockmatic.io) for details.
 
 ## Bug Reporting
 
