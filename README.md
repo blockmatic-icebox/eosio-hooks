@@ -46,7 +46,6 @@ Please report bugs big and small by [opening an issue](https://github.com/blockm
 ## License
 
 MIT © [Blockmatic](http://blockmatic.io)  
-See LICENSE for more info
 
 ## Become a Supporter
 
