@@ -1,0 +1,35 @@
+{
+  "projectName": "eos-hooks",
+  "projectOwner": "blockmatic",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "gaboesquivel",
+      "name": "Gabo Esquivel",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/391270?v=4",
+      "profile": "https://gaboesquivel.com",
+      "contributions": [
+        "code",
+        "ideas"
+      ]
+    },
+    {
+      "login": "iamkevinwolf",
+      "name": "Kevin Wolf",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/3157426?v=4",
+      "profile": "https://kevinwolf.me",
+      "contributions": [
+        "code",
+        "ideas"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
