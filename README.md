@@ -60,11 +60,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
----
-
 ## Blockmatic
 
-Blockmatic is building robust ecosystem of people and tools for development of decentralized applications (dApps) and fintech solutions.
+Blockmatic is building robust ecosystem of people and tools for development of decentralized applications.
 
 [blockmatic.io](https://blockmatic.io)
 
