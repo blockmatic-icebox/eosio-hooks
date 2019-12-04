@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.5](https://github.com/blockmatic/eosio-hooks/compare/@blockmatic/eosio-hooks-transit@0.2.4...@blockmatic/eosio-hooks-transit@0.2.5) (2019-12-04)
+
+### Bug Fixes
+
+- throw error on failed connection ([5b4b069](https://github.com/blockmatic/eosio-hooks/commit/5b4b069))
+
 ## [0.2.4](https://github.com/blockmatic/eosio-hooks/compare/@blockmatic/eosio-hooks-transit@0.2.3...@blockmatic/eosio-hooks-transit@0.2.4) (2019-10-20)
 
 ### Bug Fixes

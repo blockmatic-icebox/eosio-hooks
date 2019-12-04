@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.6](https://github.com/blockmatic/eosio-hooks/compare/example@0.2.5...example@0.2.6) (2019-12-04)
+
+### Bug Fixes
+
+- throw error on failed connection ([5b4b069](https://github.com/blockmatic/eosio-hooks/commit/5b4b069))
+
 ## [0.2.5](https://github.com/blockmatic/eos-hooks/compare/example@0.2.4...example@0.2.5) (2019-10-20)
 
 **Note:** Version bump only for package example
