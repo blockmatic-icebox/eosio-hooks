@@ -11,6 +11,8 @@
   "devDependencies": {
     "@blockmatic/dev-scripts": "^1.1.7",
     "@blockmatic/eslint-config": "^1.1.7",
+    "@types/jest": "^24.0.23",
+    "@types/mocha": "^5.2.7",
     "all-contributors-cli": "^6.10.0",
     "env-cmd": "^10.0.1",
     "eslint": "^6.4.0",
