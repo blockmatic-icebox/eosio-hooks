@@ -39,10 +39,6 @@ Duplicated React versions in your project. Run `yarn why react` to detect them.
 
 Read the [contributing guidelines](https://developers.blockmatic.io) for details.
 
-## License
-
-MIT © Blockmatic
-
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
