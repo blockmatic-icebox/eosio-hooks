@@ -19,7 +19,6 @@
 
 EOSIO hooks library for the new React Era.
 
-_THIS IS STILL A WORK IN PROCESS_
 
 ## Motivation
 
@@ -34,6 +33,11 @@ Read [ReactJS Hooks Motivation](https://reactjs.org/docs/hooks-intro.html#motiva
 ## Commons Issues
 
 Duplicated React versions in your project. Run `yarn why react` to detect them.
+
+## Disclaimer
+
+This is a work in progress. Feel free to reach us out on telegram for clarifications.
+https://t.me/blockmatic
 
 ## Contributing
 
