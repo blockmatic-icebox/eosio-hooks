@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/blockmatic/eosio-hooks/compare/@blockmatic/eosio-hooks-transit@0.2.5...@blockmatic/eosio-hooks-transit@0.3.0) (2019-12-12)
+
+
+### Features
+
+* add autoReconnect flag ([9d649fe](https://github.com/blockmatic/eosio-hooks/commit/9d649fe))
+
+
+
+
+
 ## [0.2.5](https://github.com/blockmatic/eosio-hooks/compare/@blockmatic/eosio-hooks-transit@0.2.4...@blockmatic/eosio-hooks-transit@0.2.5) (2019-12-04)
 
 ### Bug Fixes

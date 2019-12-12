@@ -1,6 +1,6 @@
 {
   "name": "@blockmatic/eosio-hooks",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "React Hooks for EOSIO dApps",
   "author": "gaboesquivel <contact@gaboesquivel.com>",
   "homepage": "https://github.com/blockmatic/eos-hooks#readme",
@@ -13,7 +13,7 @@
     "prepublishOnly": "$npm_execpath run build"
   },
   "dependencies": {
-    "@blockmatic/eosio-hooks-transit": "^0.2.5"
+    "@blockmatic/eosio-hooks-transit": "^0.3.0"
   },
   "devDependencies": {
     "@blockmatic/dev-scripts": "^1.2.1"
