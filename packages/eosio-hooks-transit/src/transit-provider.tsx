@@ -58,7 +58,7 @@ export default function TransitProvider({ children, config }: TransitProviderPro
         throw new Error(err)
       }
     },
-    [dispatch, accessContext, config.providers, setTransitProvider],
+    [dispatch, accessContext, config.providers, setTransitProvider]
   )
 
   const disconnectWallet = useCallback(() => {
@@ -71,11 +71,11 @@ export default function TransitProvider({ children, config }: TransitProviderPro
   const connectMeetOne = useCallback(() => connectWallet('meetone'), [connectWallet])
   const connectTokenPocket = useCallback(() => connectWallet('tokenpocket'), [connectWallet])
 
-  // reconnection to previusly used provider
+  // reconnection
   useEffect(() => {
-    if (!transitProvider) return
+    if (!transitProvider || !config.autoReconnect) return
     connectWallet(transitProvider as TransitWalletProvider)
-  }, [transitProvider, connectWallet])
+  }, [transitProvider, connectWallet, config.autoReconnect])
 
   return (
     <TransitContext.Provider

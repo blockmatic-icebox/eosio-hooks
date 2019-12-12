@@ -1,5 +1,5 @@
-export {}
+export {};
 
-describe('eosio-hooks-transit', () => {
-    it('needs tests');
+describe("eosio-hooks-transit", () => {
+  it("needs tests");
 });

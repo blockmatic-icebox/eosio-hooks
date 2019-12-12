@@ -24,16 +24,23 @@
   "scripts": {
     "test": "lerna run test --stream",
     "build": "lerna run build --stream",
-    "lint": "lerna run lint --stream",
     "commit": "dev-scripts commit",
     "bootstrap": "lerna bootstrap --use-workspaces",
     "release": "env-cmd lerna publish",
-    "diff": "lerna diff"
+    "diff": "lerna diff",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "format": "prettier --write ./**/*.tsx"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
   },
   "husky": {
     "hooks": {
-      "commit-msg": "dev-scripts commitmsg",
-      "pre-commit": "dev-scripts precommit"
+      "pre-commit": "lint-staged"
     }
   }
 }

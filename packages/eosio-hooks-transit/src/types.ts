@@ -9,6 +9,7 @@ export type TransitConfig = {
   appName: string;
   network: NetworkConfig;
   providers: Array<string>;
+  autoReconnect: boolean;
 };
 
 export type TransitWalletProvider = 'scatter' | 'tokenpocket' | 'lynx' | 'meetone';

@@ -923,6 +923,11 @@
     ts-jest "^24.0.2"
     typescript "3.5"
 
+"@blockmatic/eosio-hooks@./packages/eosio-hooks":
+  version "0.1.6"
+  dependencies:
+    "@blockmatic/eosio-hooks-transit" "^0.2.5"
+
 "@blockmatic/eslint-config-base@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@blockmatic/eslint-config-base/-/eslint-config-base-1.0.0.tgz#bcfeff6e5d0e08617c331cc7f0d6b2bfd934750e"
