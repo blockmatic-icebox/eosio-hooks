@@ -28,6 +28,10 @@ Read [ReactJS Hooks Motivation](https://reactjs.org/docs/hooks-intro.html#motiva
 
 ## Usage
 
+`yarn add @blockmatic/eosio-hooks`
+
+## Development
+
 `yarn bootstrap && yarn build && cd example && yarn start`
 
 ## Commons Issues
