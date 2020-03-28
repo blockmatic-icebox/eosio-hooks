@@ -65,7 +65,7 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 ## Blockmatic
 
-Blockmatic is building a robust ecosystem of people and tools for development of decentralized applications.
+Blockmatic is building a robust ecosystem of people and tools for the development of blockchain applications.
 
 [blockmatic.io](https://blockmatic.io)
 
