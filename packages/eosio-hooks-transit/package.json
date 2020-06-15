@@ -1,32 +1,28 @@
 {
   "name": "@blockmatic/eosio-hooks-transit",
   "version": "0.4.1",
-  "description": "EOS Trasit Hooks for React Applications",
+  "description": "EOS Transit Hooks for React Applications",
   "author": "gaboesquivel <contact@gaboesquivel.com>",
   "homepage": "https://github.com/blockmatic/eosio-hooks#readme",
   "license": "MIT",
   "main": "lib/index.js",
   "scripts": {
-    "test": "dev-scripts test",
+    "test": "echo 'no tests'",
     "build": "tsc",
-    "lint": "dev-scripts lint",
     "prepublishOnly": "$npm_execpath run build"
   },
   "dependencies": {
-    "eos-transit": "^4.0.1",
-    "eos-transit-lynx-provider": "^4.0.1",
-    "eos-transit-meetone-provider": "^4.0.1",
-    "eos-transit-scatter-provider": "^4.0.1",
-    "react": "^16.10.0",
-    "react-dom": "^16.10.0",
-    "react-use-localstorage": "^3.2.1"
-  },
-  "devDependencies": {
-    "@blockmatic/dev-scripts": "^1.2.1"
+    "eos-transit": "^4.0.7",
+    "eos-transit-lynx-provider": "^4.0.7",
+    "eos-transit-meetone-provider": "^4.0.7",
+    "eos-transit-scatter-provider": "^4.0.7",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-use-localstorage": "^3.4.1"
   },
   "peerDependencies": {
-    "react": "^16.10.0",
-    "react-dom": "^16.10.0"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "directories": {
     "lib": "lib",

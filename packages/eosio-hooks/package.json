@@ -7,20 +7,16 @@
   "license": "MIT",
   "main": "lib/index.js",
   "scripts": {
-    "test": "dev-scripts test",
+    "test": "echo 'no tests'",
     "build": "tsc",
-    "lint": "dev-scripts lint",
     "prepublishOnly": "$npm_execpath run build"
   },
   "dependencies": {
     "@blockmatic/eosio-hooks-transit": "^0.4.1"
   },
-  "devDependencies": {
-    "@blockmatic/dev-scripts": "^1.2.1"
-  },
   "peerDependencies": {
-    "react": "^16.10.0",
-    "react-dom": "^16.10.0"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "directories": {
     "lib": "lib",
