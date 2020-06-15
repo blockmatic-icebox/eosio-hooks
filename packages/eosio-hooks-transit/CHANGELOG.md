@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/blockmatic/eosio-hooks/compare/@blockmatic/eosio-hooks-transit@0.3.0...@blockmatic/eosio-hooks-transit@0.4.0) (2020-06-15)
+
+
+### Features
+
+* **eosio-hooks-transit:** export types ([95a6803](https://github.com/blockmatic/eosio-hooks/commit/95a6803))
+
+
+
+
+
 # [0.3.0](https://github.com/blockmatic/eosio-hooks/compare/@blockmatic/eosio-hooks-transit@0.2.5...@blockmatic/eosio-hooks-transit@0.3.0) (2019-12-12)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/blockmatic/eos-hooks/compare/@blockmatic/eosio-hooks@0.1.7...@blockmatic/eosio-hooks@0.2.0) (2020-06-15)
+
+
+### Features
+
+* **eosio-hooks-transit:** export types ([95a6803](https://github.com/blockmatic/eos-hooks/commit/95a6803))
+
+
+
+
+
 ## [0.1.7](https://github.com/blockmatic/eos-hooks/compare/@blockmatic/eosio-hooks@0.1.6...@blockmatic/eosio-hooks@0.1.7) (2019-12-12)
 
 **Note:** Version bump only for package @blockmatic/eosio-hooks
