@@ -34,3 +34,8 @@ cjs
 
 # build
 packages/**/lib
+
+
+example/build
+
+**/node_modules

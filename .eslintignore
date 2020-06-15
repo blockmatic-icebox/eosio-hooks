@@ -5,4 +5,4 @@ packages/**/lib
 storybook-static
 rn-renderer
 example
-**/__tests__
+**/__tests__/**

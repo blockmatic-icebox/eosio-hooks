@@ -42,7 +42,7 @@ export default function TransitProvider({ children, config }: TransitProviderPro
       dispatch({ type: 'CONNECT_WALLET_START', payload: { provider } })
       try {
         const TransitWalletProviders = accessContext.getWalletProviders()
-        const providerIndex = config.providers.findIndex(p => p === provider)
+        const providerIndex = config.providers.findIndex((p) => p === provider)
         const wallet = accessContext.initWallet(TransitWalletProviders[providerIndex])
         await wallet.connect()
         await wallet.login()
@@ -58,7 +58,7 @@ export default function TransitProvider({ children, config }: TransitProviderPro
         throw new Error(err)
       }
     },
-    [dispatch, accessContext, config.providers, setTransitProvider]
+    [dispatch, accessContext, config.providers, setTransitProvider],
   )
 
   const disconnectWallet = useCallback(() => {
