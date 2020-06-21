@@ -18,7 +18,6 @@
 
 EOSIO hooks library for the new React Era.
 
-
 ## Motivation
 
 React Hooks is the new way of writing ReactJS applications. They let you use state and other React features without writing a class, which means you can now write your entire application using funcitonal programming and functional components and this has a myriad of advantages. Most notably having the ability to separate functionality by concern and not by stage in the lifecycle method ( single responsibility principle ) which makes the source code of the applications much more readable, maintainable and increases reusability of the components.
@@ -29,14 +28,6 @@ Read [ReactJS Hooks Motivation](https://reactjs.org/docs/hooks-intro.html#motiva
 
 `yarn add @blockmatic/eosio-hooks`
 
-## Development
-
-`yarn bootstrap && yarn build && cd example && yarn start`
-
-## Commons Issues
-
-Duplicated React versions in your project. Run `yarn why react` to detect them.
-
 ## Disclaimer
 
 This is a work in progress. Feel free to reach us out on telegram for clarifications.
@@ -44,7 +35,15 @@ https://t.me/blockmatic
 
 ## Contributing
 
-Read the [contributing guidelines](https://developers.blockmatic.io) for details.
+[Contributing Guide](./CONTRIBUTING.md)
+
+[Code of Conduct](./CONTRIBUTING.md#conduct)
+
+## Important
+
+See [LICENSE](./LICENSE) for copyright and license terms.
+
+All repositories and other materials are provided subject to the terms of this [IMPORTANT](./IMPORTANT.md) notice and you must familiarize yourself with its terms. The notice contains important information, limitations and restrictions relating to our software, publications, trademarks, third-party resources, and forward-looking statements. By accessing any of our repositories and other materials, you accept and agree to the terms of the notice.
 
 ## Contributors ✨
 
