@@ -30,8 +30,8 @@ Read [ReactJS Hooks Motivation](https://reactjs.org/docs/hooks-intro.html#motiva
 
 ## Disclaimer
 
-This is a work in progress. Feel free to reach us out on telegram for clarifications.
-https://t.me/blockmatic
+This is a work in progress. Join the telegram channel for more information.  
+https://t.me/telosdreamstack
 
 ## Contributing
 
