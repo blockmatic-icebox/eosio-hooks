@@ -33,9 +33,7 @@ cjs
 .env
 
 # build
-packages/**/lib
-
-
+packages/**/dist
 example/build
-
 **/node_modules
+tsconfig.tsbuildinfo

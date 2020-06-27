@@ -38,7 +38,7 @@ Guidelines for bug reports:
 
 A good bug report shouldn't leave others needing to chase you up for more information. Be sure to include the details of your environment and relevant tests that demonstrate the failure.
 
-[Report a bug](https://github.com/blockmatic/eosio-hooks/issues/new?title=Bug%3A)
+[Report a bug](https://github.com/laubits/proy/issues/new?title=Bug%3A)
 
 ### Feature Requests
 

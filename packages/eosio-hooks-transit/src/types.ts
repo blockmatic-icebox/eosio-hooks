@@ -1,35 +1,32 @@
-import React from 'react'
-import { Wallet, NetworkConfig } from 'eos-transit'
+import { Wallet, WalletAccessContext } from 'eos-transit'
 
-export interface TransitProviderProps {
-  children: React.ReactNode
-  config: TransitConfig
-}
-export type TransitConfig = {
-  appName: string
-  network: NetworkConfig
-  providers: Array<string>
-  autoReconnect: boolean
-}
+export type ExtendableError = Error & Record<string, any>
 
-export type TransitWalletProvider = 'scatter' | 'tokenpocket' | 'lynx' | 'meetone'
-
-export type TransitContextType = {
-  connectWallet: (provider: TransitWalletProvider) => Promise<void>
-  disconnectWallet: () => void
-  connectScatter: () => Promise<void>
-  connectLynx: () => Promise<void>
-  connectTokenPocket: () => Promise<void>
-  connectMeetOne: () => Promise<void>
+export type TransitReducerAction = {
+  type: 'SET_ACCESS_CONTEXT' | 'LOGIN_START' | 'LOGIN_SUCCESS' | 'LOGOUT' | 'LOGIN_ERROR'
+  payload?: any
 }
 
 export interface TransitState {
-  wallet: null | Wallet
-  connecting: null | string
-  error: boolean
+  wallet: Wallet | null
+  loading: boolean
+  error: ExtendableError | null
+  activeProviderIndex: number | null
+  autoLogin: boolean
+  accessContext: WalletAccessContext | null
 }
 
-export interface TransitReducerActionType {
-  type: 'CONNECT_WALLET_START' | 'CONNECT_WALLET' | 'DISCONNECT_WALLET' | 'CONNECT_ERROR'
-  payload?: any
+export interface LoginParams {
+  providerIndex: number
+  accountName?: string
+  authorization?: string
+}
+
+export interface TransitProviderProps {
+  accessContext: WalletAccessContext
+}
+
+export interface TransitContextType extends TransitState {
+  login: (params: LoginParams) => Promise<void>
+  logout: () => Promise<void>
 }

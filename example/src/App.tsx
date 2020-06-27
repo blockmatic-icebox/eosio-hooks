@@ -1,47 +1,45 @@
-import React, { useCallback } from 'react'
-import { TransitProvider, useTransitState, useTransit } from '@blockmatic/eosio-hooks'
+import React from 'react'
+import { TransitProvider, useTransit } from '@blockmatic/eosio-hooks-transit'
+import { initAccessContext } from 'eos-transit'
+// import scatter from 'eos-transit-scatter-provider'
+import tokenPocket from 'eos-transit-tokenpocket-provider'
+// import meetone from 'eos-transit-meetone-provider'
+// import lynx from 'eos-transit-lynx-provider'
+// import ledger from 'eos-transit-ledger-provider'
+// import anchorlink from 'eos-transit-anchorlink-provider'
+// import keycat from 'eos-transit-keycat-provider'
 
 function TransitData() {
-  const state = useTransitState()
-  const { connectScatter, disconnectWallet } = useTransit()
-  const handleConnectScatter = useCallback(async () => {
-    try {
-      await connectScatter()
-    } catch (err) {
-      /* eslint-disable */
-      console.log('catched', err)
-      alert('Cannot connect to Scatter')
-      /* eslint-enable */
-    }
-  }, [connectScatter])
+  const { login, logout, ...state } = useTransit()
 
   return (
-    <div>
+    <div style={{ paddingBottom: 100 }}>
       <pre>{JSON.stringify(state, null, 2)}</pre>
       <br />
-      <button onClick={handleConnectScatter}>Connect Scatter</button>
-      <button onClick={disconnectWallet}>Disconnect Scatter</button>
+      <button onClick={() => login({ providerIndex: 0 })}>Connect</button>
+      <button onClick={() => logout()}>Disconnect</button>
     </div>
   )
 }
 
-const transitConfig = {
-  appName: 'Example',
+const accessContext = initAccessContext({
+  appName: 'eosio_hooks_example',
   network: {
-    host: 'jungle2.cryptolions.io',
+    host: 'eos.greymass.com',
     port: 80,
     protocol: 'http',
-    chainId: 'e70aaab8997e1dfce58fbfac80cbbb8fecec7b99cf982a9444273cbc64c41473',
+    chainId: 'aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906',
   },
-  providers: ['scatter'],
-  autoReconnect: false,
-}
+  walletProviders: [tokenPocket()],
+})
 
-export default function App() {
+const App = () => {
   return (
-    <TransitProvider config={transitConfig}>
+    <TransitProvider accessContext={accessContext}>
       <div> Transit Hooks</div>
       <TransitData />
     </TransitProvider>
   )
 }
+
+export default App

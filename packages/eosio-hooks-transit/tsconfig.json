@@ -1,8 +1,9 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "../../node_modules/@blockmatic/tsconfig/tsconfig.lib.json",
   "compilerOptions": {
-    "types": [],
-    "outDir": "./lib"
+    "composite": true,
+    "outDir": "dist",
+    "rootDir": "src"
   },
-  "include": ["./src"]
+  "include": ["src"]
 }

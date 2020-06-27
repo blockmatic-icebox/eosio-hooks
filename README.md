@@ -28,6 +28,11 @@ Read [ReactJS Hooks Motivation](https://reactjs.org/docs/hooks-intro.html#motiva
 
 `yarn add @blockmatic/eosio-hooks`
 
+## Architecture
+
+We follow React hooks' canonical approach.
+Read [Hooks Architecture](https://github.com/blockmatic/hooks-architecture) for a deeper explanation.
+
 ## Disclaimer
 
 This is a work in progress. Join the telegram channel for more information.  

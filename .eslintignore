@@ -6,3 +6,4 @@ storybook-static
 rn-renderer
 example
 **/__tests__/**
+packages/**/dist
