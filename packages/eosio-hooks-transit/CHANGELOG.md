@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/blockmatic/eosio-hooks/compare/@blockmatic/eosio-hooks-transit@1.0.1...@blockmatic/eosio-hooks-transit@1.1.0) (2020-06-29)
+
+
+### Features
+
+* add autoLogin flag in config ([cfe9aca](https://github.com/blockmatic/eosio-hooks/commit/cfe9aca))
+
+
+
+
+
 ## [1.0.1](https://github.com/blockmatic/eosio-hooks/compare/@blockmatic/eosio-hooks-transit@1.0.0...@blockmatic/eosio-hooks-transit@1.0.1) (2020-06-29)
 
 
