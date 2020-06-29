@@ -34,7 +34,7 @@ export const TransitProvider: React.FC<TransitProviderProps> = ({ children, acce
 
   const logout = async () => {
     await state.wallet?.logout()
-    localStorage.clear()
+    localStorage.removeItem('activeProviderIndex')
     dispatch({ type: 'LOGOUT' })
   }
 
