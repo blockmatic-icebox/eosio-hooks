@@ -49,8 +49,7 @@ export const initialState: TransitState = {
   loading: false,
   error: null,
   accessContext: null,
-  activeProviderIndex: null,
-  autoLogin: true,
+  activeProviderIndex: undefined,
 }
 
 const useTransitReducer = () => {

@@ -11,8 +11,7 @@ export interface TransitState {
   wallet: Wallet | null
   loading: boolean
   error: ExtendableError | null
-  activeProviderIndex: number | null
-  autoLogin: boolean
+  activeProviderIndex: number | undefined
   accessContext: WalletAccessContext | null
 }
 
@@ -24,6 +23,7 @@ export interface LoginParams {
 
 export interface TransitProviderProps {
   accessContext: WalletAccessContext
+  autoLogin?: boolean
 }
 
 export interface TransitContextType extends TransitState {

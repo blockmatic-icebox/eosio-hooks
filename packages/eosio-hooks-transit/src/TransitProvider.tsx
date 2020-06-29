@@ -2,14 +2,14 @@ import React from 'react'
 import { TransitProviderProps, LoginParams } from './types'
 import useTransitReducer from './useTransitReducer'
 import { TransitContext } from './TransitContext'
-import useLocalStorage from 'react-use-localstorage'
+import { useLocalStorage } from 'react-use'
 
-export const TransitProvider: React.FC<TransitProviderProps> = ({ children, accessContext }) => {
+export const TransitProvider: React.FC<TransitProviderProps> = ({ children, accessContext, autoLogin = true }) => {
   const [state, dispatch] = useTransitReducer()
   const isFirstRender = React.useRef(true)
-  const [activeProviderIndex, setActiveProviderIndex] = useLocalStorage(
-    'activeProviderIndex',
-    state.activeProviderIndex?.toString(),
+  const [activeProviderIndex, setActiveProviderIndex, removeActiveProviderIndex] = useLocalStorage<number>(
+    'active-provider-index',
+    state.activeProviderIndex,
   )
 
   const login = async ({ providerIndex, accountName, authorization }: LoginParams) => {
@@ -25,7 +25,7 @@ export const TransitProvider: React.FC<TransitProviderProps> = ({ children, acce
       if (accountName && !authorization) await wallet.login(accountName)
       if (!accountName && !authorization) await wallet.login()
 
-      setActiveProviderIndex(providerIndex.toString())
+      setActiveProviderIndex(providerIndex)
       dispatch({ type: 'LOGIN_SUCCESS', payload: { wallet } })
     } catch (error) {
       dispatch({ type: 'LOGIN_ERROR', payload: { error } })
@@ -34,14 +34,14 @@ export const TransitProvider: React.FC<TransitProviderProps> = ({ children, acce
 
   const logout = async () => {
     await state.wallet?.logout()
-    localStorage.removeItem('activeProviderIndex')
+    removeActiveProviderIndex()
     dispatch({ type: 'LOGOUT' })
   }
 
   React.useEffect(() => {
     if (!isFirstRender.current) return
     if (!state.accessContext) dispatch({ type: 'SET_ACCESS_CONTEXT', payload: { accessContext } })
-    if (state.autoLogin && !state.wallet) login({ providerIndex: parseInt(activeProviderIndex, 10) })
+    if (autoLogin && !state.wallet && activeProviderIndex !== undefined) login({ providerIndex: activeProviderIndex })
     isFirstRender.current = false
   })
 
