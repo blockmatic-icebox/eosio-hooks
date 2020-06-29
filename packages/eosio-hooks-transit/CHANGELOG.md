@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.1](https://github.com/blockmatic/eosio-hooks/compare/@blockmatic/eosio-hooks-transit@1.0.0...@blockmatic/eosio-hooks-transit@1.0.1) (2020-06-29)
+
+
+### Bug Fixes
+
+* **eosio-hooks-transit:** dont wipe all localstorage ([39d2617](https://github.com/blockmatic/eosio-hooks/commit/39d2617))
+
+
+
+
+
 # [1.0.0](https://github.com/blockmatic/eosio-hooks/compare/@blockmatic/eosio-hooks-transit@0.4.2...@blockmatic/eosio-hooks-transit@1.0.0) (2020-06-29)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@blockmatic/eosio-hooks-transit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "EOS Transit Hooks for React Applications",
   "author": "blockmatic.io",
   "homepage": "https://github.com/blockmatic/eosio-hooks#readme",
