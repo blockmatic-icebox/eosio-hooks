@@ -36,7 +36,7 @@ Read [Hooks Architecture](https://github.com/blockmatic/hooks-architecture) for 
 ## Disclaimer
 
 This is a work in progress. Join the telegram channel for more information.  
-https://t.me/telosdreamstack
+https://t.me/blockmatic
 
 ## Contributing
 
