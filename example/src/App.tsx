@@ -1,7 +1,7 @@
 import React from 'react'
 import { TransitProvider, useTransit } from '@blockmatic/eosio-hooks-transit'
 import { initAccessContext } from 'eos-transit'
-// import scatter from 'eos-transit-scatter-provider'
+import scatter from 'eos-transit-scatter-provider'
 import tokenPocket from 'eos-transit-tokenpocket-provider'
 // import meetone from 'eos-transit-meetone-provider'
 // import lynx from 'eos-transit-lynx-provider'
@@ -9,15 +9,18 @@ import tokenPocket from 'eos-transit-tokenpocket-provider'
 // import anchorlink from 'eos-transit-anchorlink-provider'
 // import keycat from 'eos-transit-keycat-provider'
 
-function TransitData() {
-  const { login, logout, ...state } = useTransit()
-
+const TransitData = () => {
+  const { login, logout, error, ...state } = useTransit()
+  console.log('error in example', error, typeof error)
   return (
     <div style={{ paddingBottom: 100 }}>
       <pre>{JSON.stringify(state, null, 2)}</pre>
       <br />
-      <button onClick={() => login({ providerIndex: 0 })}>Connect</button>
+      <button onClick={() => login({ providerIndex: 0 })}>Connect Token Pocket</button>
+      <button onClick={() => login({ providerIndex: 1 })}>Connect Scatter</button>
       <button onClick={() => logout()}>Disconnect</button>
+
+      <p>{error?.message}</p>
     </div>
   )
 }
@@ -30,7 +33,7 @@ const accessContext = initAccessContext({
     protocol: 'http',
     chainId: 'aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906',
   },
-  walletProviders: [tokenPocket()],
+  walletProviders: [tokenPocket(), scatter()],
 })
 
 const App = () => {
