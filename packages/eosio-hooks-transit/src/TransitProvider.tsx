@@ -21,6 +21,8 @@ export const TransitProvider: React.FC<TransitProviderProps> = ({ children, acce
 
       const wallet = accessContext.initWallet(selectedProvider)
 
+      await wallet.connect()
+
       if (accountName && authorization) await wallet.login(accountName, authorization)
       if (accountName && !authorization) await wallet.login(accountName)
       if (!accountName && !authorization) await wallet.login()
