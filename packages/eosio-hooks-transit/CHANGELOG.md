@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/blockmatic/eosio-hooks/compare/@blockmatic/eosio-hooks-transit@1.1.0...@blockmatic/eosio-hooks-transit@1.1.1) (2020-07-11)
+
+
+### Bug Fixes
+
+* connect before login ([5c88228](https://github.com/blockmatic/eosio-hooks/commit/5c88228))
+
+
+
+
+
 # [1.1.0](https://github.com/blockmatic/eosio-hooks/compare/@blockmatic/eosio-hooks-transit@1.0.1...@blockmatic/eosio-hooks-transit@1.1.0) (2020-06-29)
 
 
