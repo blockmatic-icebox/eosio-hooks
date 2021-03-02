@@ -12,6 +12,8 @@ Read [ReactJS Hooks Motivation](https://reactjs.org/docs/hooks-intro.html#motiva
 
 `yarn add @blockmatic/eosio-hooks`
 
+See [example](https://github.com/blockmatic/eosio-hooks/blob/master/example/src/App.tsx) for more.
+
 ## Development
 
 ```
