@@ -12,6 +12,16 @@ Read [ReactJS Hooks Motivation](https://reactjs.org/docs/hooks-intro.html#motiva
 
 `yarn add @blockmatic/eosio-hooks`
 
+## Development
+
+```
+git clone https://github.com/blockmatic/eosio-hooks
+yarn bootstrap
+yarn build
+cd example
+yarn start
+```
+
 ## Architecture
 
 We follow React hooks' canonical approach.
