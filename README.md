@@ -24,27 +24,10 @@ cd example
 yarn start
 ```
 
-## Architecture
-
-We follow React hooks' canonical approach.
-Read [Hooks Architecture](https://github.com/blockmatic/hooks-architecture) for a deeper explanation.
-
-## Disclaimer
-
-This is a work in progress. Join the telegram channel for more information.  
-https://t.me/blockmatic
-
 ## Contributing
 
-[Contributing Guide](./CONTRIBUTING.md)
+Read the [contributing guidelines](https://developers.blockmatic.io/open-source/contributing-guidelines) for details.
 
-[Code of Conduct](./CONTRIBUTING.md#conduct)
-
-## Important
-
-See [LICENSE](./LICENSE) for copyright and license terms.
-
-All repositories and other materials are provided subject to the terms of this [IMPORTANT](./IMPORTANT.md) notice and you must familiarize yourself with its terms. The notice contains important information, limitations and restrictions relating to our software, publications, trademarks, third-party resources, and forward-looking statements. By accessing any of our repositories and other materials, you accept and agree to the terms of the notice.
 
 ## Contributors ✨
 
