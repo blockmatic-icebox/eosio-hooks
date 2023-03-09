@@ -1,6 +1,13 @@
 {
-  "extends": "../../node_modules/@blockmatic/tsconfig/tsconfig.lib.json",
   "compilerOptions": {
+    "jsx": "react",
+    "lib": ["es2015", "es7", "es6", "dom"],
+    "module": "commonjs",
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2015",
+    "declaration": true,
+    "esModuleInterop": true,
     "composite": true,
     "outDir": "dist",
     "rootDir": "src"

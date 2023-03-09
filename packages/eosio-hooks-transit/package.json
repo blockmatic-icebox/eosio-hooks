@@ -1,6 +1,6 @@
 {
   "name": "@blockmatic/eosio-hooks-transit",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "description": "EOS Transit Hooks for React Applications",
   "author": "blockmatic.io",
   "homepage": "https://github.com/blockmatic/eosio-hooks#readme",
@@ -12,12 +12,10 @@
     "build": "tsc",
     "prepublishOnly": "$npm_execpath run build"
   },
-  "dependencies": {
-    "react-use": "^15.3.2"
-  },
+  "dependencies": {},
   "peerDependencies": {
     "eos-transit": "^4.0.7",
-    "react": "^16.13.1"
+    "react": "^18.0.0"
   },
   "directories": {
     "dist": "dist"
@@ -35,5 +33,8 @@
   "gitHead": "2522d34a2e019feb71f574948301c43310b4e4e5",
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "@types/react": "18.0.28"
   }
 }
